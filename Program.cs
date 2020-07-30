@@ -15,7 +15,7 @@ namespace qwe
     {
         static int _sel;
         static string _filePathText = @"./WorkText.txt"; //default path
-        
+         
         static async Task Main(string[] args) //static void Main(string[] args)
         {
             Language(); //Выбор языка для удобства 
