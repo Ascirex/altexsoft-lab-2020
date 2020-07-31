@@ -142,6 +142,15 @@ namespace qwe {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Please enter the path to the file starting from disk (for example D: /work/text.txt):.
+        /// </summary>
+        internal static string Select2 {
+            get {
+                return ResourceManager.GetString("Select2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Selected language is english.
         /// </summary>
         internal static string Test {

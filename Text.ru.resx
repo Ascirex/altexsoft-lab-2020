@@ -118,36 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="errOpened" xml:space="preserve">
-    <value>Sry, i cant read file...</value>
+    <value> Сорян, не могу открыть файлик...</value>
   </data>
   <data name="isOpened" xml:space="preserve">
-    <value>Opened file:</value>
+    <value> Открываем файл:</value>
   </data>
   <data name="Opened" xml:space="preserve">
-    <value> Ok, the file is written to memory, what should do with it next?</value>
+    <value> Окей, файл записан в память, что с ним сделать дальше?</value>
   </data>
   <data name="Select" xml:space="preserve">
-    <value>Please, select - what do next:</value>
+    <value>Пожалуйста, выберите - что делать дальше:</value>
   </data>
   <data name="Select1" xml:space="preserve">
-    <value> Find text file, enter the file path manually or open WorkText.txt:</value>
+    <value> Найти текстовый файл, ввести путь к файлу вручную или открыть WorkText.txt:</value>
   </data>
   <data name="Select1.1" xml:space="preserve">
-    <value> [1] Find file</value>
+    <value> [1] Найти файл</value>
   </data>
   <data name="Select1.2" xml:space="preserve">
-    <value> [2] Enter file path</value>
+    <value> [2] Ввести путь к файлу</value>
   </data>
   <data name="Select1.3" xml:space="preserve">
-    <value> [3] Open WorkText.txt</value>
+    <value> [3] Открыть WorkText.txt</value>
   </data>
   <data name="Select1Err" xml:space="preserve">
-    <value>Please choose from the suggested options (by number):</value>
+    <value> Пожалуйста, выберите из предложенных вариантов (числом):</value>
   </data>
   <data name="Select2" xml:space="preserve">
-    <value>Please enter the path to the file starting from disk (for example D: /work/text.txt):</value>
+    <value>Пожалуйста, введите путь к файлу, начиная с диска (к примеру D:/work/text.txt) :</value>
   </data>
   <data name="Test" xml:space="preserve">
-    <value>Selected language is english</value>
+    <value>Выбранный язык русский</value>
   </data>
 </root>
