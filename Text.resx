@@ -120,6 +120,15 @@
   <data name="errOpened" xml:space="preserve">
     <value>Sry, i cant read file...</value>
   </data>
+  <data name="Finder1" xml:space="preserve">
+    <value> Ok, enter the first letter of the local drive (like "C" or "d" or "x"): </value>
+  </data>
+  <data name="Finder1.1" xml:space="preserve">
+    <value> Yours disk:</value>
+  </data>
+  <data name="Finder1.2" xml:space="preserve">
+    <value> Enter number what go next:</value>
+  </data>
   <data name="isOpened" xml:space="preserve">
     <value>Opened file:</value>
   </data>

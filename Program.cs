@@ -6,20 +6,21 @@ namespace qwe
 {
     class Program
     {
-        static int _sel = 0;
-        static string _filePathText = @"./WorkText.txt"; //default path
+        static int    sel = 0;
+        static string filePathText = @"./WorkText.txt"; //default path
         
          static void Main(string[] args)  //static async Task Main(string[] args) 
         {
-            SelectorX _select = new SelectorX(_filePathText,ref _sel); //передаются параметры ссылки и "нажатие" кнопки
-            _select.Language();
-            _select.Select();
+            SelectorX  selec = new SelectorX(filePathText,ref  sel); //передаются параметры ссылки и "нажатие" кнопки
+            selec.Language();
+            selec.Select();
 
-            _filePathText = _select.filePathText;
+             filePathText = selec.filePathText;
 
-            Console.WriteLine(_select.textForChanges);
+            //Console.WriteLine("Сделаем вид что все ок)");
+             Console.WriteLine(selec.textForChanges);
 
-            TextModif _modifyText = new TextModif();
+            TextModif modifyText = new TextModif();
 
 
 

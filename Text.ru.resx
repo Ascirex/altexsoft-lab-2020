@@ -120,6 +120,15 @@
   <data name="errOpened" xml:space="preserve">
     <value> Сорян, не могу открыть файлик...</value>
   </data>
+  <data name="Finder1" xml:space="preserve">
+    <value> Хорошо, введите первую букву локального диска (к примеру "C", "d" или "x"):</value>
+  </data>
+  <data name="Finder1.1" xml:space="preserve">
+    <value> Ваши диски:</value>
+  </data>
+  <data name="Finder1.2" xml:space="preserve">
+    <value> Введите числом куда перейди дальше: </value>
+  </data>
   <data name="isOpened" xml:space="preserve">
     <value> Открываем файл:</value>
   </data>

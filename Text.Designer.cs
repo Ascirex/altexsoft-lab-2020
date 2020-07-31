@@ -70,6 +70,33 @@ namespace qwe {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на  Ok, enter the first letter of the local drive (like &quot;C&quot; or &quot;d&quot; or &quot;x&quot;): .
+        /// </summary>
+        internal static string Finder1 {
+            get {
+                return ResourceManager.GetString("Finder1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Yours disk:.
+        /// </summary>
+        internal static string Finder1_1 {
+            get {
+                return ResourceManager.GetString("Finder1.1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Enter number what go next:.
+        /// </summary>
+        internal static string Finder1_2 {
+            get {
+                return ResourceManager.GetString("Finder1.2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Opened file:.
         /// </summary>
         internal static string isOpened {
