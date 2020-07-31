@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="errFinder1" xml:space="preserve">
+    <value> Введены неверные данные, возврат... &lt;==</value>
+  </data>
   <data name="errOpened" xml:space="preserve">
     <value> Сорян, не могу открыть файлик...</value>
   </data>
@@ -128,6 +131,12 @@
   </data>
   <data name="Finder1.2" xml:space="preserve">
     <value> Введите числом куда перейди дальше: </value>
+  </data>
+  <data name="Finder1.3" xml:space="preserve">
+    <value> Ваши файлы и папки:</value>
+  </data>
+  <data name="FinderBack" xml:space="preserve">
+    <value> Введите любой текст чтобы вернуться в начало пути.</value>
   </data>
   <data name="isOpened" xml:space="preserve">
     <value> Открываем файл:</value>

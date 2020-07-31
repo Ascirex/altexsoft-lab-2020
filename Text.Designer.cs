@@ -61,6 +61,15 @@ namespace qwe {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на  Entered error data, return... &lt;==.
+        /// </summary>
+        internal static string errFinder1 {
+            get {
+                return ResourceManager.GetString("errFinder1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Sry, i cant read file....
         /// </summary>
         internal static string errOpened {
@@ -93,6 +102,24 @@ namespace qwe {
         internal static string Finder1_2 {
             get {
                 return ResourceManager.GetString("Finder1.2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Yours folders and files:.
+        /// </summary>
+        internal static string Finder1_3 {
+            get {
+                return ResourceManager.GetString("Finder1.3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Enter any text to return to the beginning of the path..
+        /// </summary>
+        internal static string FinderBack {
+            get {
+                return ResourceManager.GetString("FinderBack", resourceCulture);
             }
         }
         

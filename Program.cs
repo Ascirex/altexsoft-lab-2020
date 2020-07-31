@@ -11,6 +11,7 @@ namespace qwe
         
          static void Main(string[] args)  //static async Task Main(string[] args) 
         {
+            Console.Title = "AscHomeWork v0.01a :3" ;
             SelectorX  selec = new SelectorX(filePathText,ref  sel); //передаются параметры ссылки и "нажатие" кнопки
             selec.Language();
             selec.Select();
