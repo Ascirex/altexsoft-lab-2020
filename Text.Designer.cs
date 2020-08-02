@@ -61,6 +61,15 @@ namespace qwe {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на  Okay, how are we going to change the text?.
+        /// </summary>
+        internal static string ChangerT_1 {
+            get {
+                return ResourceManager.GetString("ChangerT_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на  Entered error data, return... &lt;==.
         /// </summary>
         internal static string errFinder1 {
@@ -120,6 +129,15 @@ namespace qwe {
         internal static string FinderBack {
             get {
                 return ResourceManager.GetString("FinderBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  File:.
+        /// </summary>
+        internal static string FType {
+            get {
+                return ResourceManager.GetString("FType", resourceCulture);
             }
         }
         
@@ -210,6 +228,15 @@ namespace qwe {
         internal static string Test {
             get {
                 return ResourceManager.GetString("Test", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Rewrite this document?.
+        /// </summary>
+        internal static string TextTransfer {
+            get {
+                return ResourceManager.GetString("TextTransfer", resourceCulture);
             }
         }
     }

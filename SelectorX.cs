@@ -40,9 +40,10 @@ namespace qwe
     {
         int selID { get; set; }
         public string filePathText { get; set; }
-        public string textForChanges { get; set; } = "File not found";
+        public  string textForChanges { get; set; } = "File not found";
         int _enterID=1;
         string _createPath = "";
+
         public SelectorX(string filePath, ref int  selectID)
         {
             this.selID =  selectID;
@@ -129,6 +130,7 @@ namespace qwe
 
         public void Select()   // выборка
             {
+                _createPath = "";
                 Console.Clear();
                 Console.WriteLine("\n " + Text.Test);//Выбранный язык - русский
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -163,11 +165,11 @@ namespace qwe
 
                         case 51: // 3 read WorkText.txt
                             Console.Clear();
+                            filePathText = @"./WorkText.txt";
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine($" \n {Text.isOpened} \n");
                             Console.ForegroundColor = ConsoleColor.White;
-                            ReadFile();
-                    
+                        ReadFile();
                             break;
 
                         default: //if error
@@ -226,6 +228,8 @@ namespace qwe
                 Language();
             }
         }
+       
+
         public void ReadFile() //открытие файла, передать сюда filePathText
         {
             DirectoryInfo dirinfo = new DirectoryInfo(filePathText);

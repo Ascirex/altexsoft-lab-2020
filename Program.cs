@@ -8,20 +8,39 @@ namespace qwe
     {
         static int    sel = 0;
         static string filePathText = @"./WorkText.txt"; //default path
+    
         
          static void Main(string[] args)  //static async Task Main(string[] args) 
         {
+            string _sel = "";
             Console.Title = "AscHomeWork v0.01a :3" ;
-            SelectorX  selec = new SelectorX(filePathText,ref  sel); //передаются параметры ссылки и "нажатие" кнопки
+            SelectorX  selec = new SelectorX(filePathText,ref sel); //передаются параметры ссылки и "нажатие" кнопки
             selec.Language();
-            selec.Select();
 
-             filePathText = selec.filePathText;
+            do
+            {
+                selec.Select();
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($"\n {Text.TextTransfer} ({filePathText})");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("\n [Y]");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(" YES\t|");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("\t[N]");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(" NO\n ");
+                Console.ForegroundColor = ConsoleColor.White;
 
-            //Console.WriteLine("Сделаем вид что все ок)");
-             Console.WriteLine(selec.textForChanges);
+                _sel = Console.ReadKey().Key.ToString();
+                Console.Clear();
+                Console.WriteLine(_sel);
+            }
+            while (_sel!="Y" );
 
-            TextModif modifyText = new TextModif();
+            filePathText = selec.filePathText;
+            TextModif modifyText = new TextModif(selec.textForChanges, filePathText);
+            modifyText.BeginChanges();
 
 
 
@@ -33,6 +52,6 @@ namespace qwe
             #endregion
         }
 
-      
+          
     }
 }

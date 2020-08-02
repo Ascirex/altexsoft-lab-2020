@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChangerT_1" xml:space="preserve">
+    <value> Окей, как будем менять текст?</value>
+  </data>
   <data name="errFinder1" xml:space="preserve">
     <value> Введены неверные данные, возврат... &lt;==</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="FinderBack" xml:space="preserve">
     <value> Введите любой текст чтобы вернуться в начало пути.</value>
+  </data>
+  <data name="FType" xml:space="preserve">
+    <value> Файл:</value>
   </data>
   <data name="isOpened" xml:space="preserve">
     <value> Открываем файл:</value>
@@ -167,5 +173,8 @@
   </data>
   <data name="Test" xml:space="preserve">
     <value>Выбранный язык русский</value>
+  </data>
+  <data name="TextTransfer" xml:space="preserve">
+    <value> Изменить этот документ?</value>
   </data>
 </root>
