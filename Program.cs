@@ -43,7 +43,7 @@ namespace qwe
             TextModif modifyText = new TextModif(selec.textForChanges, filePathText);
             modifyText.BeginChanges();
 
-
+             
 
 
             #region TheEnd
