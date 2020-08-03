@@ -43,9 +43,9 @@ namespace qwe
             TextModif modifyText = new TextModif(selec.textForChanges, filePathText);
             modifyText.BeginChanges();
 
+              
+
              
-
-
             #region TheEnd
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n\n EXIT :3 Goodluck :)");

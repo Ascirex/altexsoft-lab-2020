@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
+
 namespace qwe
 {
 
@@ -197,15 +198,30 @@ namespace qwe
            CyanText($"\n{Text.Info1}: {masSS.Length}");
             choseN();
         }
-
+    
+        string  ReverceMatched(Match x)
+        {
+            string xRevers = new string(x.Value.Reverse().ToArray()) ; 
+            return xRevers;
+        }
 
         void ReverceText()
         {
+            //var s = ReadyText.Split('.');
+            //var s1 = s[2].Split(new char[] { ' ', '?', '!', '.', ';', ':', ',', '\r', '\n', '(', ')', '\"' }, StringSplitOptions.RemoveEmptyEntries);
+            //foreach (var r in s1)
+            //{
+            //    var a = r.Reverse().ToArray() ;
+            //    Console.WriteLine(a);
+            //}
+          
+            var textReverce = ReadyText.Split(new char[] { '?', '!', '.' }, StringSplitOptions.RemoveEmptyEntries);
+            var endSymbolIndex = ReadyText.LastIndexOf(textReverce[2])-1;
+            var lastSymbol = ReadyText[endSymbolIndex];
+            string a = Regex.Replace(textReverce[2], $@"\w(?<!\d)[\w'-]*",ReverceMatched );
 
-            var s = ReadyText.Split('.');
-           // string[] s2 = s[2].Split(' '); 
-            Console.WriteLine(s[2]);
-            // не успел разобраться с поворотом текста :с 
+            Console.WriteLine(a+lastSymbol);
+
 
             Console.ReadKey();
 

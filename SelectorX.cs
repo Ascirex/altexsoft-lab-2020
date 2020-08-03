@@ -82,6 +82,7 @@ namespace qwe
             {
                 _enterID++;
                 arrlist.Add(new FinderPathDirs() { DirName = papkes.Name, Type = "Dir", dirID = _enterID });
+         
             }
             foreach (FileInfo files in dir.GetFiles())     //Вывод файлов
             {
