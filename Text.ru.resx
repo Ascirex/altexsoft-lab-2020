@@ -126,6 +126,12 @@
   <data name="errOpened" xml:space="preserve">
     <value> Сорян, не могу открыть файлик...</value>
   </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="FCopy" xml:space="preserve">
+    <value>&gt; скопирован в директорию:</value>
+  </data>
   <data name="Finder1" xml:space="preserve">
     <value> Хорошо, введите первую букву локального диска (к примеру "C", "d" или "x"):</value>
   </data>
@@ -142,10 +148,19 @@
     <value> Введите любой текст чтобы вернуться в начало пути.</value>
   </data>
   <data name="FType" xml:space="preserve">
-    <value> Файл:</value>
+    <value>&gt; Файл:</value>
+  </data>
+  <data name="Info1" xml:space="preserve">
+    <value>Количество слов</value>
   </data>
   <data name="isOpened" xml:space="preserve">
     <value> Открываем файл:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Продолжить или выйти</value>
+  </data>
+  <data name="Next1" xml:space="preserve">
+    <value>Продолжить</value>
   </data>
   <data name="Opened" xml:space="preserve">
     <value> Окей, файл записан в память, что с ним сделать дальше?</value>
@@ -171,10 +186,37 @@
   <data name="Select2" xml:space="preserve">
     <value>Пожалуйста, введите путь к файлу, начиная с диска (к примеру D:/work/text.txt) :</value>
   </data>
+  <data name="T1S" xml:space="preserve">
+    <value>Пожалуйста, введите только 1 символ.</value>
+  </data>
+  <data name="TdelS" xml:space="preserve">
+    <value>Введите символ чтобы удалить из файла.</value>
+  </data>
+  <data name="TdelT" xml:space="preserve">
+    <value>Введите текст чтобы удалить из файла.</value>
+  </data>
   <data name="Test" xml:space="preserve">
     <value>Выбранный язык русский</value>
   </data>
   <data name="TextTransfer" xml:space="preserve">
     <value> Изменить этот документ?</value>
+  </data>
+  <data name="TNF" xml:space="preserve">
+    <value>Символа не найден...</value>
+  </data>
+  <data name="TNF1" xml:space="preserve">
+    <value>Строчка не найдена...</value>
+  </data>
+  <data name="Tselect1.1" xml:space="preserve">
+    <value>Удалить символ в файле.</value>
+  </data>
+  <data name="Tselect1.2" xml:space="preserve">
+    <value>Удалить слово в файле.</value>
+  </data>
+  <data name="Tselect1.3" xml:space="preserve">
+    <value>Информация о файле + каждое 10ое слово.</value>
+  </data>
+  <data name="Tselect1.4" xml:space="preserve">
+    <value>Третяя строчка со словами наоборот.</value>
   </data>
 </root>

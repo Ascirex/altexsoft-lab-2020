@@ -53,9 +53,6 @@ namespace qwe
         public void FinderPath()
         {
             Console.Clear();
-           
-       
-
             DriveInfo[] driveINF = DriveInfo.GetDrives();
             
             if (_createPath == "")
@@ -76,7 +73,6 @@ namespace qwe
             _enterID = 0;
 
             DirectoryInfo dir = new DirectoryInfo(_createPath);
-            
 
             ArrayList arrlist = new ArrayList();
           
@@ -101,6 +97,7 @@ namespace qwe
             Console.WriteLine($"\n Path: {_createPath}\n {Text.Finder1_2}");
             FinderPathDirs arrls = new FinderPathDirs();
 
+          
             //Попытка стянуть данные
 
             try
@@ -109,7 +106,9 @@ namespace qwe
                 arrls = (FinderPathDirs)arrlist[ss - 1];
                 if (arrls.getType() == "Dir") {
                 _createPath += arrls.getName() + "/";
-                }else if (arrls.getType() == "File")
+                    FinderPath();
+                }
+                else if (arrls.getType() == "File")
                 {
                     _createPath += arrls.getName();
                     filePathText = _createPath;
@@ -127,6 +126,7 @@ namespace qwe
             }
 
         }
+        
 
         public void Select()   // выборка
             {

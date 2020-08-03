@@ -88,6 +88,24 @@ namespace qwe {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Exit.
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &gt; copied to this directory:.
+        /// </summary>
+        internal static string FCopy {
+            get {
+                return ResourceManager.GetString("FCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на  Ok, enter the first letter of the local drive (like &quot;C&quot; or &quot;d&quot; or &quot;x&quot;): .
         /// </summary>
         internal static string Finder1 {
@@ -133,11 +151,20 @@ namespace qwe {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на  File:.
+        ///   Ищет локализованную строку, похожую на &gt; File:.
         /// </summary>
         internal static string FType {
             get {
                 return ResourceManager.GetString("FType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Count words.
+        /// </summary>
+        internal static string Info1 {
+            get {
+                return ResourceManager.GetString("Info1", resourceCulture);
             }
         }
         
@@ -147,6 +174,24 @@ namespace qwe {
         internal static string isOpened {
             get {
                 return ResourceManager.GetString("isOpened", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Continue or exit.
+        /// </summary>
+        internal static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Continue.
+        /// </summary>
+        internal static string Next1 {
+            get {
+                return ResourceManager.GetString("Next1", resourceCulture);
             }
         }
         
@@ -223,6 +268,33 @@ namespace qwe {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Please, enter 1 symbol.
+        /// </summary>
+        internal static string T1S {
+            get {
+                return ResourceManager.GetString("T1S", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Enter character to remove it from the file..
+        /// </summary>
+        internal static string TdelS {
+            get {
+                return ResourceManager.GetString("TdelS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Enter word to remove it from the file..
+        /// </summary>
+        internal static string TdelT {
+            get {
+                return ResourceManager.GetString("TdelT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Selected language is english.
         /// </summary>
         internal static string Test {
@@ -237,6 +309,60 @@ namespace qwe {
         internal static string TextTransfer {
             get {
                 return ResourceManager.GetString("TextTransfer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Symbol not found....
+        /// </summary>
+        internal static string TNF {
+            get {
+                return ResourceManager.GetString("TNF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на String not found....
+        /// </summary>
+        internal static string TNF1 {
+            get {
+                return ResourceManager.GetString("TNF1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete symbol in file..
+        /// </summary>
+        internal static string Tselect1_1 {
+            get {
+                return ResourceManager.GetString("Tselect1.1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete word in file..
+        /// </summary>
+        internal static string Tselect1_2 {
+            get {
+                return ResourceManager.GetString("Tselect1.2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на File info + 10th word .
+        /// </summary>
+        internal static string Tselect1_3 {
+            get {
+                return ResourceManager.GetString("Tselect1.3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The third line with the words in reverse..
+        /// </summary>
+        internal static string Tselect1_4 {
+            get {
+                return ResourceManager.GetString("Tselect1.4", resourceCulture);
             }
         }
     }

@@ -13,6 +13,7 @@ namespace qwe
          static void Main(string[] args)  //static async Task Main(string[] args) 
         {
             string _sel = "";
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.Title = "AscHomeWork v0.01a :3" ;
             SelectorX  selec = new SelectorX(filePathText,ref sel); //передаются параметры ссылки и "нажатие" кнопки
             selec.Language();
@@ -21,13 +22,13 @@ namespace qwe
             {
                 selec.Select();
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine($"\n {Text.TextTransfer} ({filePathText})");
+                Console.WriteLine($"\n {Text.TextTransfer} ({selec.filePathText})");
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("\n [Y]");
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write(" YES\t|");
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("\t[N]");
+                Console.Write("\t[N]"); 
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write(" NO\n ");
                 Console.ForegroundColor = ConsoleColor.White;
@@ -47,7 +48,7 @@ namespace qwe
 
             #region TheEnd
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n\n Конец проги");
+            Console.WriteLine("\n\n EXIT :3 Goodluck :)");
             Console.ReadKey();
             #endregion
         }
