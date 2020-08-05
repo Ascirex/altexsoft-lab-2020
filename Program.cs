@@ -12,10 +12,10 @@ namespace qwe
         
          static void Main(string[] args)  //static async Task Main(string[] args) 
         {
-            string _sel = "";
+            string xsel = "";
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.Title = "AscHomeWork v0.01a :3" ;
-            SelectorX  selec = new SelectorX(filePathText,ref sel); //передаются параметры ссылки и "нажатие" кнопки
+            SelectorX  selec = new SelectorX(filePathText, sel); //передаются параметры ссылки и "нажатие" кнопки
             selec.Language();
 
             do
@@ -33,11 +33,11 @@ namespace qwe
                 Console.Write(" NO\n ");
                 Console.ForegroundColor = ConsoleColor.White;
 
-                _sel = Console.ReadKey().Key.ToString();
+                xsel = Console.ReadKey().Key.ToString();
                 Console.Clear();
-                Console.WriteLine(_sel);
+                Console.WriteLine(xsel);
             }
-            while (_sel!="Y" );
+            while (xsel!="Y" );
 
             filePathText = selec.filePathText;
             TextModif modifyText = new TextModif(selec.textForChanges, filePathText);

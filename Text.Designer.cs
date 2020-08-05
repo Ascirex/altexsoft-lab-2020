@@ -223,7 +223,7 @@ namespace qwe {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на  [1] Find file.
+        ///   Ищет локализованную строку, похожую на  [1] List folder names at specified path.
         /// </summary>
         internal static string Select1_1 {
             get {
@@ -232,7 +232,7 @@ namespace qwe {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на  [2] Enter file path.
+        ///   Ищет локализованную строку, похожую на Deleted.
         /// </summary>
         internal static string Select1_2 {
             get {
@@ -241,7 +241,7 @@ namespace qwe {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на  [3] Open WorkText.txt.
+        ///   Ищет локализованную строку, похожую на  [2] Open WorkText.txt.
         /// </summary>
         internal static string Select1_3 {
             get {

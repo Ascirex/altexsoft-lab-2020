@@ -26,19 +26,19 @@ namespace qwe
         public void BeginChanges()
         {
             Console.Clear();
-            string _backupFile = @"./backupTextFile.txt";
+            string backupFile = @"./backupTextFile.txt";
 
             // Create 1 static backup 
             #region backup code heare
             FileInfo FFInf = new FileInfo(getedTextPath);
-            FileInfo BFInf = new FileInfo(_backupFile);
+            FileInfo BFInf = new FileInfo(backupFile);
             try
             {
                 using (FileStream fs = BFInf.Create()) { } //источник
-                if (File.Exists(_backupFile)) { BFInf.Delete(); } //если существует то удалить :3
+                if (File.Exists(backupFile)) { BFInf.Delete(); } //если существует то удалить :3
 
                 //Копирование...
-                FFInf.CopyTo(_backupFile);
+                FFInf.CopyTo(backupFile);
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"\n{Text.FType}");
                 Console.ForegroundColor = ConsoleColor.White;
@@ -46,7 +46,7 @@ namespace qwe
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"{Text.FCopy}");
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine($" ({_backupFile})");
+                Console.WriteLine($" ({backupFile})");
 
             }
             catch (IOException e)
@@ -115,9 +115,9 @@ namespace qwe
             try
             {
                 Console.Write("  > ");
-                char _entrText = Console.ReadKey().KeyChar;
-                CyanText($"\n\n Deleted Char: \"{_entrText}\"\n");
-                    ReadyText = Regex.Replace(ReadyText, $@"[{_entrText}]", "");
+                char entrText = Console.ReadKey().KeyChar;
+                CyanText($"\n\n Deleted Char: \"{entrText}\"\n");
+                    ReadyText = Regex.Replace(ReadyText, $@"[{entrText}]", "");
                     Console.WriteLine(ReadyText);
                     WriterFile();
             }

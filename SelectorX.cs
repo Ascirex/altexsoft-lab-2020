@@ -17,12 +17,12 @@ namespace qwe
     {
         private int _dirID=1;
         public int dirID { get { return _dirID; } set { _dirID = value; } }
-        public string DirName { get; set; }
+        public string Name { get; set; }
         public string Type { get; set; }
 
         public String getName()
         {
-            return DirName;
+            return Name;
         }
         public String getType()
         {
@@ -44,7 +44,7 @@ namespace qwe
         int _enterID=1;
         string _createPath = "";
 
-        public SelectorX(string filePath, ref int  selectID)
+        public SelectorX(string filePath, int  selectID)
         {
             this.selID =  selectID;
             this.filePathText = filePath;
@@ -53,46 +53,50 @@ namespace qwe
         public void FinderPath()
         {
             Console.Clear();
-            DriveInfo[] driveINF = DriveInfo.GetDrives();
-            
             if (_createPath == "")
             {
-                Console.WriteLine($"\n {Text.Finder1}\n\n{Text.Finder1_1} ");
-                foreach (DriveInfo drive in driveINF) //Показывает доступные диски
-            {
-                if (drive.DriveType != DriveType.Fixed)
-                    continue;
-                string fullpath = drive.RootDirectory.FullName;
-                Console.WriteLine(" >> " + fullpath);
+                Console.WriteLine($"{Text.Select2}");
+                _createPath = Console.ReadLine();
             }
-            
-            _createPath = Console.ReadKey().Key.ToString()+":/";
-            Console.WriteLine("\n Путь сейчас: "+_createPath+"\n");
+            else { 
+
+            Console.WriteLine($" \n{Text.Finder1_3} \n");
             }
-            else { Console.WriteLine($" \n{Text.Finder1_3} \n"); }
             _enterID = 0;
-
-            DirectoryInfo dir = new DirectoryInfo(_createPath);
-
-            ArrayList arrlist = new ArrayList();
           
-
+            DirectoryInfo dir = new DirectoryInfo(_createPath);
+            List<FinderPathDirs> arrlist = new List<FinderPathDirs>();
+            List<FinderPathDirs> dirsList = new List<FinderPathDirs>();
+            List<FinderPathDirs> fileList = new List<FinderPathDirs>();
 
             foreach (DirectoryInfo papkes in dir.GetDirectories())   //Вывод папок
             {
                 _enterID++;
-                arrlist.Add(new FinderPathDirs() { DirName = papkes.Name, Type = "Dir", dirID = _enterID });
+               dirsList.Add(new FinderPathDirs() { Name = papkes.Name, Type = "Dir", dirID = _enterID });
          
             }
+
             foreach (FileInfo files in dir.GetFiles())     //Вывод файлов
             {
                 _enterID++;
-                arrlist.Add(new FinderPathDirs() { DirName = files.Name, Type = "File", dirID = _enterID });
+                fileList.Add(new FinderPathDirs() { Name = files.Name, Type = "File", dirID = _enterID });
             }
-     
+            
+            dirsList = dirsList.OrderBy(ob => ob.Name).ToList();
+            fileList = fileList.OrderBy(ob => ob.Name).ToList();
+
+            foreach (var XX in dirsList)
+            {
+                arrlist.Add(XX);
+            }
+            foreach (var XX in fileList)
+            {
+                arrlist.Add(XX);
+            }
+
             foreach (FinderPathDirs finder in arrlist)    // Вывод на экран
             {
-                Console.WriteLine(finder.dirID + ". " + finder.Type + " " + finder.DirName) ;
+                Console.WriteLine( $"{finder.dirID}. {finder.Type}| {finder.Name}") ;
             }
             Console.WriteLine($">> {Text.FinderBack}");
             Console.WriteLine($"\n Path: {_createPath}\n {Text.Finder1_2}");
@@ -138,7 +142,7 @@ namespace qwe
                 Console.WriteLine($"\n {Text.Select}"); //Пж, выберите что дальше:
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine($"\n {Text.Select1}");//предложенные варианты
-                Console.WriteLine($"\n {Text.Select1_1}\n {Text.Select1_2}\n {Text.Select1_3}\n");//варианты
+                Console.WriteLine($"\n {Text.Select1_1}\n {Text.Select1_3}\n");//варианты
 
                 // === SELECTOR ===
                 try
@@ -151,20 +155,7 @@ namespace qwe
                             FinderPath();
                             break;
 
-                        case 50: // 2
-                            Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine($"\n\n {Text.Select2}\n");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        filePathText = Console.ReadLine();
-                        Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine($" \n {Text.isOpened} \n");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        ReadFile();
-                        break;
-
-                        case 51: // 3 read WorkText.txt
+                        case 50: // 3 read WorkText.txt
                             Console.Clear();
                             filePathText = @"./WorkText.txt";
                             Console.ForegroundColor = ConsoleColor.Green;
@@ -183,8 +174,8 @@ namespace qwe
                     }
 
                 }
-                catch
-                {
+                catch 
+                { 
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(Text.Select1Err);
