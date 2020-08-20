@@ -16,7 +16,7 @@ namespace NewHomeWork2
         {
             SetSettings();
             var ingredient = new Ingredient();
-
+            
             var recipe = new Recipe();
             recipe.Ingredients = new List<Ingredient>();
             recipe.Ingredients.Add(ingredient);
