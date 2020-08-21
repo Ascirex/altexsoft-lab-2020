@@ -10,10 +10,9 @@ namespace NewHomeWork1
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Type { get; set; }
-
-    
+        public string Type { get; set; } 
     }
+
     class FilePathBuilder //Начало. Место где вводится путь к файлу + "создание пути" по ходу программы. 
     {
         FileTextReader reader = new FileTextReader();
