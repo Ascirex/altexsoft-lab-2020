@@ -1,32 +1,30 @@
 ﻿using System;
-using System.Collections.Generic; 
-using System.Globalization;
-using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-
-
-
-namespace NewHomeWork1.TextMethods
+namespace NewHomeWork1._4.Methods.Models
 {
-    class ReverceText //задание 3. Реверсировать 3 строчку.
+    internal class ReverceText
     {
-        public void Reverce(string ReadyText)
+        public void Reverce(string pathF)
         {
+            Console.Clear();
+            var ReadyText = FileTextReader.TextReader(pathF);
+
             var textReverce = ReadyText.Split(new char[] { '?', '!', '.' }, StringSplitOptions.RemoveEmptyEntries);
             var endSymbolIndex = ReadyText.LastIndexOf(textReverce[2]) - 1;
             var lastSymbol = ReadyText[endSymbolIndex];
-            string a = Regex.Replace(textReverce[2], $@"\w(?<!\d)[\w'-]*", ReverceMatched); 
+            var a = Regex.Replace(textReverce[2], $@"\w(?<!\d)[\w'-]*", ReverceMatched);
             Console.WriteLine(a + lastSymbol);
-             
+
             Console.ReadKey();
 
         }
         string ReverceMatched(Match x)
         {
-            string xRevers = new string(x.Value.Reverse().ToArray());
+            var xRevers = new string(x.Value.Reverse().ToArray());
             return xRevers;
         }
     }
