@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-
-namespace NewHomeWork1.TextMethods
+namespace NewHomeWork1._4.Methods
 {
-    class InfoText //задание 2. Сколько слов, и каждое 10ое слово через запятую.
+    internal class InfoText
     {
-        public void GetInfo(string text)
+        public void GetInfo(string path)
         {
-
+            string text = FileTextReader.TextReader(path);
             ConsoleExt.Clear();
-            string[] changeText = text.Split(new char[] { ' ', '?', '!', '.', ';', ':', ',', '\r', '\n', '(', ')', '\"' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] changeText = text.Split(new char[] {' ', '?', '!', '.', ';', ':', ',', '\r', '\n', '(', ')', '\"'},
+                StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < changeText.Length; i += 10)
             {
                 if (i < changeText.Length)
@@ -21,7 +21,7 @@ namespace NewHomeWork1.TextMethods
             }
 
             ConsoleExt.WriteLine($"\n Инфо:  {changeText.Length} слов в тексте.");
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
