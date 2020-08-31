@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace NewHomeWork2.Models
 {
-    class Catalog:BaseModel
-    {
-        public List<SubCatalog> SubCatalogs { get; set; } = new List<SubCatalog>();
-
-    }
+	internal class Catalog : BaseModel
+	{
+		public List<int> SubCatalogsIds { get; set; } = new List<int>();
+	}
 
 }

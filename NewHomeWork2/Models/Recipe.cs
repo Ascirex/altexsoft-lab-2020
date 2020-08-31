@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace NewHomeWork2.Models
 {
-    class Recipe:BaseModel
-    {
-
-        public string Description { get; set; }
-        public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
-        public List<string> StepList { get; set; } = new List<string>();
-    }
+	internal class Recipe : BaseModel
+	{
+		public string Description { get; set; }
+		public List<string> Steps { get; set; } = new List<string>();
+		public List<int> IngredientsIds { get; set; } = new List<int>();
+	}
 }

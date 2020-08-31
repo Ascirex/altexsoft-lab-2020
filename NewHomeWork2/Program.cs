@@ -1,39 +1,28 @@
-﻿using NewHomeWork2.Models;
-using Newtonsoft.Json;
-using System;
-using System.IO;
-using System.Net.Cache;
-using System.Text;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text;
+using NewHomeWork2.Models;
+using NewHomeWork2.Repositories;  
 
-namespace NewHomeWork2
+namespace NewHomeWork2 
 {
-    
-
-    class Program
+	  internal class Program 
     {
-        static void Main(string[] args)
-        {
-            SetSettings();
-            var ingredient = new Ingredient();
-            
-            var recipe = new Recipe();
-            recipe.Ingredients = new List<Ingredient>();
-            recipe.Ingredients.Add(ingredient);
 
-            var subCatalog = new SubCatalog();
-            subCatalog.Recipe.Add(recipe);
-
-            var catalog = new Catalog();
-            catalog.SubCatalogs.Add(subCatalog);
+        private static void Main(string[] args)
+	    {
+		    SetSettings(); 
+            ShowLists showAll = new ShowLists();
+            showAll.Show();
 
 
 
-
-
-            Console.WriteLine("End Programm");
             Console.ReadKey();
         }
+       
 
         static void SetSettings()
         {
@@ -43,5 +32,4 @@ namespace NewHomeWork2
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
-
 }
