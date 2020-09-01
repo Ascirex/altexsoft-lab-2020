@@ -15,6 +15,7 @@ namespace NewHomeWork1._4
             var selector = new Selector();
                 selector.Begin();
 
+
                 #region END PROGRAM 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\n The end.\n  До скорого :)\n");
