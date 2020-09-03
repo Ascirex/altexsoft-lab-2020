@@ -5,8 +5,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text;
 using NewHomeWork2.Models;
-using NewHomeWork2.Repositories;
-using NewHomeWork2.UserInteractions;
+using NewHomeWork2.Repositories;  
 
 namespace NewHomeWork2 
 {
@@ -15,10 +14,11 @@ namespace NewHomeWork2
 
         private static void Main(string[] args)
 	    {
-		    SetSettings();
+		    SetSettings(); 
+            ShowLists showAll = new ShowLists();
+            showAll.Show();
 
-		    CatalogsInteraction catalogsUserInteraction = new CatalogsInteraction(null);
-		    catalogsUserInteraction.Start();
+
 
             Console.ReadKey();
         }
