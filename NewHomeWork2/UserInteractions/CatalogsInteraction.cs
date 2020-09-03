@@ -22,7 +22,7 @@ namespace NewHomeWork2.UserInteractions
 			var choice = ConExt.ReadChoice();
 			switch (choice)
 			{
-				case 1:
+				case 1: 
 					ChooseCatalogs();
 					break;
 				case 2:
