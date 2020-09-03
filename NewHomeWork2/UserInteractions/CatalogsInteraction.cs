@@ -34,7 +34,7 @@ namespace NewHomeWork2.UserInteractions
 					break;
 			}
 		}
-
+		  
 		protected override void ShowOptions()
 		{
 			ConExt.WriteLine(" ");
