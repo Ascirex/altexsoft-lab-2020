@@ -1,36 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NewHomeWork2
 {
-     static class conExt
-    {
-        public static void WriteLine(string text, ConsoleColor color = ConsoleColor.White)
-        {
-            Console.ForegroundColor = color;
-            Console.WriteLine(text);
+	internal static class ConExt
+	{
+		public static void WriteLine(string text, ConsoleColor color = ConsoleColor.White)
+		{
+			Console.ForegroundColor = color;
+			Console.WriteLine(text);
 
-        }
-        public static void Write(string text, ConsoleColor color = ConsoleColor.White)
-        {
-            Console.ForegroundColor = color;
-            Console.WriteLine(text);
+		}
 
-        }
-        public static void Clear()
-        {
-            Console.Clear();
-        }
+		public static void Write(string text, ConsoleColor color = ConsoleColor.White)
+		{
+			Console.ForegroundColor = color;
+			Console.WriteLine(text);
 
-        public static  void Select(int id)
-        {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("   [");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write(id);
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("] ");
-        }
-    }
+		}
+
+		public static void Clear()
+		{
+			Console.Clear();
+		}
+
+		public static void WriteSelect(int id)
+		{
+			Console.Write(" [");
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.Write(id);
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.Write("] ");
+		}
+
+		public static int ReadChoice()
+		{
+			var choice = Console.ReadLine();
+			if (int.TryParse(choice, out int choiceInt))
+			{
+				return choiceInt;
+			}
+			else
+			{
+				WriteLine("Enter correct value:");
+				return ReadChoice();
+			}
+		}
+	}
 }

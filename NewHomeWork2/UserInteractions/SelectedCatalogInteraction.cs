@@ -34,7 +34,7 @@ namespace NewHomeWork2.UserInteractions
 					RenameCatalog();
 					break;
 				case 2:
-					ChooseSubCatalogs();
+					ChooseSubCatalogs(); 
 					return;
 				default:
 					ConExt.WriteLine("Пока еще нет такой функции");
