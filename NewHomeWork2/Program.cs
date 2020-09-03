@@ -1,36 +1,28 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.IO;
-using System.Net.Cache;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Reflection;
+using System.Runtime.Serialization;
 using System.Text;
+using NewHomeWork2.Models;
+using NewHomeWork2.Repositories;
+using NewHomeWork2.UserInteractions;
 
-namespace NewHomeWork2
+namespace NewHomeWork2 
 {
-    // public class Person
-    // {
-    //    public string Name { get; set; }
-    //    public int Age { get; set; } 
-    // }
-
-    class Program
+	  internal class Program 
     {
-        static void Main(string[] args)
-        {
-            SetSettings();
-            // var person = File.Exists("Test.json")?JsonConvert.DeserializeObject<Person>(File.ReadAllText("Test.json")):new Person
-            // {
-            //    Name = "SS",
-            //    Age = 10
 
-            // };  
-            //  File.WriteAllText("Test.json", JsonConvert.SerializeObject(person));
-            
+        private static void Main(string[] args)
+	    {
+		    SetSettings();
 
+		    CatalogsInteraction catalogsUserInteraction = new CatalogsInteraction(null);
+		    catalogsUserInteraction.Start();
 
-
-            Console.WriteLine("End Programm");
             Console.ReadKey();
         }
+       
 
         static void SetSettings()
         {
@@ -40,5 +32,4 @@ namespace NewHomeWork2
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
-
 }
